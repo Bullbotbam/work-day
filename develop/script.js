@@ -21,6 +21,7 @@ $(document).ready(function () {
 
   $("#container").append(divHour, divTime, inputNote, saveBtn);
 });
+
 // get current hour
 // if note is active during current hour background-color: red and disable input;
 // if note is post-active during current hour background-color: gray and enable input;
