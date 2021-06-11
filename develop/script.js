@@ -23,11 +23,32 @@ $(document).ready(function () {
 });
 
 // get current hour
+TimeIsNow = function () {
+  var currentHour = moment().hour();
+  console.log(currentTime);
+  // if note is post-active during current hour background-color: gray and disable input;
 
-var currentTime = moment().hour();
-console.log(currentTime);
-// if note is active during current hour background-color: red and disable input;
-// if note is post-active during current hour background-color: gray and enable input;
-// if note is pre-active during current hour background-color: green and enable input;
-// loop thorugh an array of objects (time: <value>, notes: <value>), save objects, skip if null
-// set results of array to localStorage
+  if (timeBlock < currentHour) {
+    // grey out
+    div.classList.add("past");
+    div.classList.remove("present");
+    div.classList.add("future");
+
+  } // if note is active during current hour background-color: red and enable input;
+ 
+  else if (timeBlock == currentHour) {
+    div.classList.add("present");
+    div.classList.remove("past");
+    div.classList.remove("future");
+  }
+  // if note is pre-active during current hour background-color: green and enable input;
+  else {
+    div.classList.add("future");
+    div.classList.remove("past");
+    div.classList.remove("present");
+  }
+ 
+   // loop thorugh an array of objects (time: <value>, notes: <value>), save objects, skip if null
+  // set results of array to localStorage
+};
+document.addEventListener("click",function())
