@@ -23,6 +23,9 @@ $(document).ready(function () {
 });
 
 // get current hour
+
+var currentTime = moment().hour();
+console.log(currentTime);
 // if note is active during current hour background-color: red and disable input;
 // if note is post-active during current hour background-color: gray and enable input;
 // if note is pre-active during current hour background-color: green and enable input;
