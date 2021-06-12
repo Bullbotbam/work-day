@@ -26,20 +26,20 @@ var timeIsNow = function () {
 
     if (timeHour < currentHour) {
       // grey out
-      div.classList.add("past");
-      div.classList.remove("present");
-      div.classList.remove("future");
+      this.classList.add("past");
+      this.classList.remove("present");
+      this.classList.remove("future");
     } // if note is active during current hour background-color: red and enable input;
     else if (timeHour == currentHour) {
-      div.classList.add("present");
-      div.classList.remove("past");
-      div.classList.remove("future");
+      this.classList.add("present");
+      this.classList.remove("past");
+      this.classList.remove("future");
     }
     // if note is pre-active during current hour background-color: green and enable input;
     else {
-      div.classList.add("future");
-      div.classList.remove("past");
-      div.classList.remove("present");
+      this.classList.add("future");
+      this.classList.remove("past");
+      this.classList.remove("present");
     }
   });
   // set results of array to localStorage
