@@ -21,14 +21,14 @@ var timeIsNow = function () {
   console.log(currentHour);
   // loop thorugh an array of objects (time: <value>, notes: <value>), save objects, skip if null
   $(".time-block").each(function () {
-    var hourBlock = parseInt($(this).attr("id").split("hour")[1]);
+    var timeHour = parseInt($(this).attr("id").split("hour")[1]);
     // if note is post-active during current hour background-color: gray and disable input;
 
     if (timeHour < currentHour) {
       // grey out
       div.classList.add("past");
       div.classList.remove("present");
-      div.classList.add("future");
+      div.classList.remove("future");
     } // if note is active during current hour background-color: red and enable input;
     else if (timeHour == currentHour) {
       div.classList.add("present");
@@ -44,7 +44,7 @@ var timeIsNow = function () {
   });
   // set results of array to localStorage
 };
-
+timeIsNow();
 // function(saveNotes){
 //   if(inputNote.value){
 
