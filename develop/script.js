@@ -23,7 +23,7 @@ var timeIsNow = function () {
   $(".time-block").each(function () {
     var timeHour = parseInt($(this).attr("id").split("hour")[1]);
     // if note is post-active during current hour background-color: gray and disable input;
-
+    console.log(timeHour);
     if (timeHour < currentHour) {
       // grey out
       this.classList.add("past");
