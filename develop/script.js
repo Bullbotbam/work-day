@@ -5,9 +5,9 @@ document.getElementById("currentDay").innerHTML = today;
 // variables to create hour div and childElements
 const body = document.body;
 const divHour = document.querySelector("#hour1");
-const divTime = document.querySelector("time");
-const inputNote = document.querySelector("description");
-const saveBtn = document.querySelector("saveBtn");
+const divTime = document.querySelector(".time");
+const inputNote = document.querySelector(".description");
+const saveBtn = document.querySelector(".saveBtn");
 let scheduleHours = $("#container").append(
   divHour,
   divTime,
@@ -45,16 +45,18 @@ var timeIsNow = function () {
   // set results of array to localStorage
 };
 timeIsNow();
-// function(saveNotes){
-//   if(inputNote.value){
+//
 
-//   }
+const saveNotes = (e) => {
+  localStorage.setItem("storageInput", inputNote.value);
+  // let inputData =
+  console.log(inputData);
+};
+// some variable hold the specific element at the moment of the click
+saveBtn.addEventListener("click", saveNotes(event));
+// let events = localStorage.getItem("events")
+//   ? JSON.parse(localStorage.getItem("events"))
+//   : [];
 
-// }
-// saveBtn.addEventListener("click", saveNotes);
-
-let events = localStorage.getItem("events")
-  ? JSON.parse(localStorage.getItem("events"))
-  : [];
-
-const eventInput = events.find((e) => e.hour === clicked);
+// const eventInput = events.find((e) => e.hour === clicked);
+// const storageInput = document.querySelector(".storage");
