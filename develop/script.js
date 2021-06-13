@@ -48,9 +48,9 @@ timeIsNow();
 //
 
 const saveNotes = (e) => {
-  localStorage.setItem("storageInput", inputNote.value);
-  // let inputData =
-  console.log(inputData);
+  localStorage.storageInput = inputNote.value;
+  let inputDataSib = inputNote.previousSibling;
+  console.log(inputDataSib);
 };
 // some variable hold the specific element at the moment of the click
 saveBtn.addEventListener("click", saveNotes(event));
