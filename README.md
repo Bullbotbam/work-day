@@ -1,15 +1,14 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# A Work Day Scheduler
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This app was created as a simple calendar application to allow the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-The starter code uses the [Moment.js](https://momentjs.com/) library to work with date and time, but feel free to use a different JavaScript solution to handle this functionality since Moment.js is considered a "legacy" project. Learn more about these other solutions in the [Moment.js project status page.](https://momentjs.com/docs/#/-project-status/)
+Although this technology is no longer being activiely supported I used the [Moment.js](https://momentjs.com/) library to work with date and time, there are opportunities to use a different JavaScript solution to handle this functionality since Moment.js is considered a "legacy" project. However, to effectively learn more about how to support technology as it grows older.
 
-## User Story
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
+## App Purpose
+
+To manage time more effectively: An employee with a busy schedule requested we add the ability to track important events to a daily planner
+ 
 ```
 
 ## Acceptance Criteria
@@ -30,17 +29,4 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-The following animation demonstrates the application functionality:
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
