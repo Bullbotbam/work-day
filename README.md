@@ -30,4 +30,4 @@ THEN the saved events persist
 ```
 ## Links
 
-https://bullbotbam.github.io/work-day/
+[My Work Day App](https://bullbotbam.github.io/work-day/)
