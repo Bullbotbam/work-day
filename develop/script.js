@@ -7,14 +7,14 @@ const body = document.body;
 const divHour = document.querySelector("#hour1");
 const divTime = document.querySelector(".time");
 const inputNote = document.querySelector(".description");
-const saveBtn = document.querySelector(".saveBtn");
+// const saveBtn = document.querySelector(".saveBtn");
 let scheduleHours = $("#container").append(
   divHour,
   divTime,
   inputNote,
   saveBtn
 );
-
+// var getEvents = JSON.parse(localStorage.getItem("Notes"));
 // get current hour
 var timeIsNow = function () {
   var currentHour = moment().hour();
@@ -45,18 +45,14 @@ var timeIsNow = function () {
   // set results of array to localStorage
 };
 timeIsNow();
-//
 
-const saveNotes = (e) => {
-  localStorage.storageInput = inputNote.value;
-  let inputDataSib = inputNote.previousSibling;
-  console.log(inputDataSib);
-};
-// some variable hold the specific element at the moment of the click
-saveBtn.addEventListener("click", saveNotes(event));
-// let events = localStorage.getItem("events")
-//   ? JSON.parse(localStorage.getItem("events"))
-//   : [];
+var saveBtn = $(".saveBtn");
+saveBtn.on("click", function () {
+  // console.log(this); //save button
+  var time = $(this).siblings(".hour").text();
+  var plan = $(this).siblings(".description").val();
 
-// const eventInput = events.find((e) => e.hour === clicked);
-// const storageInput = document.querySelector(".storage");
+  // THEN the text for that event is saved in local storage
+  localStorage.setItem("Notes", plan);
+  let events = localStorage.getItem("Notes");
+});
